@@ -18,6 +18,8 @@ register(
     max_episode_steps=250,
 )
 
+from mj_envs.hand_manipulation_suite.pen_v0 import PenEnvV0
+
 from mjrl.envs.mujoco_env import MujocoEnv
 # ^^^^^ so that user gets the correct error
 # message if mujoco is not installed correctly

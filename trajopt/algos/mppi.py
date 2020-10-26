@@ -54,6 +54,8 @@ class MPPI(Trajectory):
         weighted_seq = S*act.T
         act_sequence = np.sum(weighted_seq.T, axis=0)/(np.sum(S) + 1e-6)
         self.act_sequence = act_sequence
+        # idx = np.argmax(R)
+        # self.act_sequence = act[idx]
 
     def advance_time(self, act_sequence=None):
         act_sequence = self.act_sequence if act_sequence is None else act_sequence
